@@ -16,6 +16,7 @@
             height: 100vh;
             font-family: Arial, sans-serif;
         }
+        
         .player {
             text-align: center;
             padding: 20px;
@@ -23,6 +24,16 @@
             background: rgba(30, 30, 30, 0.8);
             box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
             width: 320px;
+        }
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
         }
         ul {
             list-style: none;
@@ -55,6 +66,13 @@
         button:hover {
             background: #3700b3;
         }
+        </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="background.mp4" type="video/mp4"> <!-- Video nền thay ở đây -->
+  </video>
+    
     </style>
 </head>
 <body>
